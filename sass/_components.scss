@@ -16,6 +16,11 @@
        transition: all .8s;
        color: var(--color-primary-text);
 
+       @media only screen and (max-width: 600px) {
+            transform: skewX(0);
+                
+        }
+
        
     }
 
@@ -23,6 +28,11 @@
         width: 40%;
         margin-right: 2rem;
         transform: skewX(12deg);
+
+        @media only screen and (max-width: 600px) {
+            transform: skewX(0);
+                
+        }
 
         &--heading {
             font-size: 2.5rem;
@@ -52,10 +62,11 @@
             letter-spacing: .1rem;
             text-transform: uppercase;
             font-weight: 600;
+            text-align: justify;
 
             @media only screen and (max-width: 900px) {
-                font-size: 1.8rem;
-                
+                font-size: 1.4rem;
+                font-weight: 400;
             }
             
         }
@@ -64,10 +75,16 @@
     &__second {
         width: 60%;
         transform: skewX(12deg);
+
+        @media only screen and (max-width: 600px) {
+            transform: skewX(0);
+                
+        }
         &--parag {
             letter-spacing: .1rem;
             text-transform: uppercase;
             font-weight: 400;
+            text-align: justify;
 
             @media only screen and (max-width: 900px) {
                 font-size: 1.4rem;
