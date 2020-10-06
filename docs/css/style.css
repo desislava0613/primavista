@@ -97,14 +97,16 @@
     top: 3rem;
     right: 3rem;
     border-radius: 50%;
-    z-index: 3000;
+    z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer; }
     @media only screen and (max-width: 900px) {
       .nav-small__button {
         top: 1rem;
-        right: 1rem; } }
+        right: 7.5rem;
+        height: 6rem;
+        width: 6rem; } }
   .nav-small__background {
     height: 6rem;
     width: 6rem;
@@ -113,18 +115,20 @@
     top: 3.5rem;
     right: 3.5rem;
     background-image: radial-gradient(#ff6600, #f8c09b);
-    z-index: 2000;
+    z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
     @media only screen and (max-width: 900px) {
       .nav-small__background {
         top: 1.5rem;
-        right: 1.5rem; } }
+        right: 8rem;
+        height: 5rem;
+        width: 5rem; } }
   .nav-small__nav {
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2500;
+    z-index: 1500;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 0;
     width: 0; }
@@ -163,7 +167,7 @@
     width: 100%; }
   .nav-small__icon {
     position: relative;
-    margin-top: 3.5rem; }
+    margin-top: 3rem; }
     .nav-small__icon, .nav-small__icon::before, .nav-small__icon::after {
       width: 3rem;
       height: 2px;
@@ -209,14 +213,18 @@
     color: var(--color-primary-text); }
     @media only screen and (max-width: 600px) {
       .about__us {
-        transform: skewX(0); } }
+        transform: skewX(0);
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
   .about__first {
     width: 40%;
     margin-right: 2rem;
     transform: skewX(12deg); }
     @media only screen and (max-width: 600px) {
       .about__first {
-        transform: skewX(0); } }
+        transform: skewX(0);
+        width: 100%; } }
     .about__first--heading {
       font-size: 2.5rem;
       line-height: 1.6;
@@ -240,13 +248,15 @@
       @media only screen and (max-width: 900px) {
         .about__first--parg {
           font-size: 1.4rem;
-          font-weight: 400; } }
+          font-weight: 400;
+          margin-bottom: 1rem; } }
   .about__second {
     width: 60%;
     transform: skewX(12deg); }
     @media only screen and (max-width: 600px) {
       .about__second {
-        transform: skewX(0); } }
+        transform: skewX(0);
+        width: 100%; } }
     .about__second--parag {
       letter-spacing: .1rem;
       text-transform: uppercase;
@@ -254,7 +264,8 @@
       text-align: justify; }
       @media only screen and (max-width: 900px) {
         .about__second--parag {
-          font-size: 1.4rem; } }
+          font-size: 1.4rem;
+          width: 100%; } }
   .about__both {
     padding-top: 4rem;
     max-width: 75%;
@@ -331,10 +342,6 @@
         font-size: 1.4rem;
         margin-top: 1.5rem; } }
 
-@media only screen and (max-width: 600px) {
-  .bg-video__content {
-    width: auto; } }
-
 .music {
   display: flex;
   flex-direction: column;
@@ -352,6 +359,10 @@
     color: var(--color-primary-text); }
   .music__video {
     padding-bottom: 20rem; }
+    @media only screen and (max-width: 600px) {
+      .music__video > iframe {
+        width: 80%;
+        height: 80%; } }
 
 .gallery {
   background-image: linear-gradient(to right, var(--color-primary), var(--color-orange-dark));
