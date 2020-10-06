@@ -2,7 +2,7 @@
   background-image: linear-gradient(to right bottom, rgba(207, 130, 79, 0.3), rgba(49, 20, 1, 0.3)), url("../pics/nice.jpg");
   height: 95vh;
   background-size: cover;
-  background-position: center;
+ 
   position: relative;
   object-fit: cover; }
   @media only screen and (max-width: 800px) {
