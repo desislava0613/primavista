@@ -1,14 +1,13 @@
 .wrapper {
   background-image: linear-gradient(to right bottom, rgba(207, 130, 79, 0.3), rgba(49, 20, 1, 0.3)), url("../pics/nice.jpg");
-  height: 100vh;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  @media only screen and(max-width: 800px) {
-        background-image: linear-gradient(to right bottom, rgba(#cf824f, .3), rgba(#311401, .3)), url("/pics/blur.png");
-        height: 100%;
-    }
-}
+  height: 95vh;
+  background-size: cover;
+  position: relative;
+  object-fit: cover; }
+  @media only screen and (max-width: 800px) {
+    .wrapper {
+      background-image: linear-gradient(to right bottom, rgba(207, 130, 79, 0.3), rgba(49, 20, 1, 0.3)), url("/pics/blur.png");
+      height: 100%; } }
 
 .site-header {
   text-transform: uppercase;
@@ -16,6 +15,9 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem 2rem; }
+  @media only screen and (max-width: 800px) {
+    .site-header {
+      flex-direction: column; } }
   .site-header__nav {
     display: flex;
     justify-content: flex-end;
@@ -101,8 +103,8 @@
     cursor: pointer; }
     @media only screen and (max-width: 900px) {
       .nav-small__button {
-        top: 2rem;
-        right: 2rem; } }
+        top: 1rem;
+        right: 1rem; } }
   .nav-small__background {
     height: 6rem;
     width: 6rem;
@@ -115,8 +117,8 @@
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
     @media only screen and (max-width: 900px) {
       .nav-small__background {
-        top: 2.5rem;
-        right: 2.5rem; } }
+        top: 1.5rem;
+        right: 1.5rem; } }
   .nav-small__nav {
     height: 100vh;
     position: fixed;
@@ -205,10 +207,16 @@
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
     transition: all .8s;
     color: var(--color-primary-text); }
+    @media only screen and (max-width: 600px) {
+      .about__us {
+        transform: skewX(0); } }
   .about__first {
     width: 40%;
     margin-right: 2rem;
     transform: skewX(12deg); }
+    @media only screen and (max-width: 600px) {
+      .about__first {
+        transform: skewX(0); } }
     .about__first--heading {
       font-size: 2.5rem;
       line-height: 1.6;
@@ -227,17 +235,23 @@
       padding-top: 1rem;
       letter-spacing: .1rem;
       text-transform: uppercase;
-      font-weight: 600; }
+      font-weight: 600;
+      text-align: justify; }
       @media only screen and (max-width: 900px) {
         .about__first--parg {
-          font-size: 1.8rem; } }
+          font-size: 1.4rem;
+          font-weight: 400; } }
   .about__second {
     width: 60%;
     transform: skewX(12deg); }
+    @media only screen and (max-width: 600px) {
+      .about__second {
+        transform: skewX(0); } }
     .about__second--parag {
       letter-spacing: .1rem;
       text-transform: uppercase;
-      font-weight: 400; }
+      font-weight: 400;
+      text-align: justify; }
       @media only screen and (max-width: 900px) {
         .about__second--parag {
           font-size: 1.4rem; } }
@@ -317,11 +331,9 @@
         font-size: 1.4rem;
         margin-top: 1.5rem; } }
 
-.bg-video {
-  height: 100vh; }
-  @media only screen and (max-width: 600px) {
-    .bg-video__content {
-      width: auto; } }
+@media only screen and (max-width: 600px) {
+  .bg-video__content {
+    width: auto; } }
 
 .music {
   display: flex;
