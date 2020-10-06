@@ -1,0 +1,38 @@
+:root {
+    --color-primary: #ff6600;
+    --color-primary-light:  #cf824f;
+    --color-orange-dark: #311401;
+    --color-purple:  #85021f;
+    --color-gray: #646464;
+    --color-border: rgba(0, 0, 0, 0.2);
+    --color-primary-text:  #f8c09b;
+    --box-shadow: 0 2px 2px 4px rgba(0,0,0, .3);
+
+    --bp-largest: 1200px;
+    --bp-large: 1100px;
+    --bp-medium: 900px;
+    --bp-small: 600px;
+    --bp-smallest: 500px;
+}
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
