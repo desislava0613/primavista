@@ -18,7 +18,9 @@
 
        @media only screen and (max-width: 600px) {
             transform: skewX(0);
-                
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
        
@@ -31,6 +33,7 @@
 
         @media only screen and (max-width: 600px) {
             transform: skewX(0);
+            width: 100%;
                 
         }
 
@@ -67,6 +70,7 @@
             @media only screen and (max-width: 900px) {
                 font-size: 1.4rem;
                 font-weight: 400;
+                margin-bottom: 1rem;
             }
             
         }
@@ -78,6 +82,7 @@
 
         @media only screen and (max-width: 600px) {
             transform: skewX(0);
+            width: 100%;
                 
         }
         &--parag {
@@ -88,7 +93,7 @@
 
             @media only screen and (max-width: 900px) {
                 font-size: 1.4rem;
-                
+                width: 100%;
             }
         }
 
@@ -224,19 +229,6 @@
 
 }
 
-.bg-video {
-    
-
-    &__content {
-        // width: 100%;
-        // height: 100%;
-        @media only screen and (max-width: 600px) {
-            width: auto
-             
-         }
-        
-    }
-}
 
 
 ////////////////////////////////// music
@@ -264,6 +256,14 @@
 
     &__video {
         padding-bottom: 20rem;
+
+        & > iframe {
+
+            @media only screen and(max-width: 600px) {
+                width: 80%;
+                height: 80%;
+            }
+        }
     }
     
 }
