@@ -3,7 +3,12 @@
   height: 100vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover; 
+  @media only screen and(max-width: 800px) {
+        background-image: linear-gradient(to right bottom, rgba(#cf824f, .3), rgba(#311401, .3)), url("/pics/blur.png");
+        height: 100%;
+    }
+}
 
 .site-header {
   text-transform: uppercase;
