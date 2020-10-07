@@ -66,6 +66,7 @@
     }
     
     &__list {
+        display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -126,7 +127,7 @@
         transition-timing-function: ease-in;
     }
 
-    &__checkbox:checked ~ &__nav > &__list {
+    &__checkbox:checked ~ &__nav > &__list {   /// локално работи, но в github не
         display: block;
         // opacity: 1;
         width: 100%;
