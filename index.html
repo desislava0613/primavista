@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
-   
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     
@@ -133,18 +133,10 @@
             </div>
         </div>
     </section>
-    <!-- <section class="video">
-        <div class="bg-video">
-            <video class="bg-video__content" autoplay muted loop>
-                <source src="/video/primavista.mp4" type="video/mp4">
-
-            </video>
-        </div>
-    </section> -->
     <section class="music" id="music">
         <h2 class="music__heading" data-aos="zoom-in">Представяме ви нашият дебютен сингъл - Истини</h2>
         <div class="music_video" data-aos="zoom-in">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz59yEVMA_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz59yEVMA_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         </div>
     </section>
     <section class="gallery" id="gall">
@@ -165,22 +157,21 @@
                 <img src="pics/five1.jpg" class="gallery__img">
             </figure>
         </div>
-        <div class="gallerysecond">
-            <figure class="gallerysecond__box gallerysecond__box--1">
-                <img src="pics/first1.jpg" class="gallerysecond__img">
-            </figure>
-            <figure class="gallerysecond__box gallerysecond__box--2">
-                <img src="pics/third1.jpg"  class="gallerysecond__img">
-            </figure>
-            <figure class="gallerysecond__box gallerysecond__box--3">
-                <img src="pics/seven1.jpg" class="gallerysecond__img">
-            </figure>
-            <figure class="gallerysecond__box gallerysecond__box--4">
-                <img src="pics/second1.jpg" class="gallerysecond__img">
-            </figure>
-            
-        </div>
     </section>
+    <section class="gallerysecond" id="gall">
+                <a class="lightBox gallerysecond__one"><img src="pics/first1.jpg" class="thumb gallerysecond__img"></a>
+                <a class="lightBox  gallerysecond__two"><img src="pics/third1.jpg" class="thumb gallerysecond__img"></a>
+                <a class="lightBox gallerysecond__three"><img src="pics/seven1.jpg" class="thumb gallerysecond__img"></a> 
+            
+            <div class="gallerysecond__backDrop"></div>
+  
+            <div class="gallerysecond__box">
+                <div class="gallerysecond__close">&#10008;</div>
+                <img class="gallerysecond__largeImage" src="">
+            </div>
+        
+        </section>
+    
     
     <section class="events" id="events">
         <div class="events__box" data-aos="fade-down-right">
@@ -221,23 +212,6 @@
        
     </section>
     <section class="contact-section" id="contacts">
-        <!-- <div class="contact-section__wrapper">
-            <div class="contact-section__forms">
-                <form action="#" class="contact-section__form">
-                    <h3 class="contact-section__heading">Свържи се с нас!</h3>
-                    <div class="contact-section__group">
-                        <input type="text" class="contact-section__input" placeholder="Име" required id="name">
-                        <label for="name" class="contact-section__label">Име</label>
-                    </div>
-                    <div class="contact-section__group">
-                        <input type="email" class="contact-section__input" placeholder="Email" required id="email">
-                        <label for="email" class="contact-section__label">Email</label>
-                    </div>
-                    <textarea name="contact" id="contact" cols="30" rows="10" class="contact-section__textarea"></textarea>
-                    <button class="contact-section__btn">Изпрати</button>
-                </form>
-            </div>
-        </div> -->
             <iframe class="contact-secton__fb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPrima-Vista-115550289884791&tabs=timeline&width=400&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         
         <div class="contact-section__icons"  data-aos="zoom-out">
@@ -250,37 +224,13 @@
         <p>&copy; All rights reserved</p>
     </footer>
 
-	<script src="https://use.fontawesome.com/68818a9b92.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-	$(".lightBox").on("click", function(){
-	  $(".gallerysecond__backDrop").animate({"opacity": ".70"}, 500);
-	  $(".gallerysecond__box").animate({"opacity": "1.0"}, 500);
-	  $(".gallerysecond__backDrop, .gallerysecond__box").css("display", "block");
-	});
-	
-	$(".thumb ").on("click", function(){
-	  var largeImage = $(this).attr("src");
-	  $(".gallerysecond__largeImage").attr({src: largeImage});
-	});
-	
-	$(".gallerysecond__close, .gallerysecond__backDrop").on("click", function(){
-	  closeBox();
-	});
-  
-	function closeBox(){
-	  $(".gallerysecond__backDrop, .gallerysecond__box").animate({"opacity": "0"}, 500, function(){
-	  $(".gallerysecond__backDrop, .gallerysecond__box").css("display", "none");
-	  });
-	}
-  });
-    </script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
 
 </body>
 </html>
