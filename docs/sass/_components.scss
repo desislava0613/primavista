@@ -240,7 +240,10 @@
     justify-content: center;
     align-items: center;
     margin-top: -10rem;
-    margin-bottom: 10rem;
+    
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    
     
     height: 100vh;
     background-image: linear-gradient(to right, var(--color-purple), var(--color-orange-dark));
@@ -281,29 +284,33 @@
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 85%, 69% 95%, 23% 93%, 0 100%);
     background-size: cover;
     margin-top: -15rem;
-    padding-bottom: 20rem;
-
+    // padding-bottom: 20rem;
+    height: 100vh;
+    
+    @media only screen and (max-width: 1000px) {
+        display: none;
+         
+     }
     
    
 
     &__container {
+        background-image: linear-gradient(to right, var(--color-primary), var(--color-orange-dark));
         display: flex;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
-        padding: 2em 1em;
+        padding: 8rem 20rem 10rem 10rem;
         box-sizing: border-box;
-        height: 100vh;
-        padding-top: 20rem;
+        padding-top: 8rem;
+        height: 100%;
+        padding-bottom: 8rem;
 
         @media only screen and(max-width: 1100px) {
             width: 100%;
             padding-top: 10rem;
         }
 
-        @media only screen and (max-width: 700px) {
-            display: none;
-             
-         }
+        
 
        
     }
@@ -338,6 +345,7 @@
     &__box:hover > img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 }
 
